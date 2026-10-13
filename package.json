@@ -1,0 +1,23 @@
+{
+  "name": "projekat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandramilosevic/Projekat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sandramilosevic/Projekat/issues"
+  },
+  "homepage": "https://github.com/sandramilosevic/Projekat#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^26.6.5"
+  }
+}
