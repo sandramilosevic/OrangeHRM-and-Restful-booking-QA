@@ -1,0 +1,26 @@
+{
+    "validUser":{
+        "userRole":"ESS",
+        "employeeName":"Amelia Brown",
+        "status":"Enabled",
+        "username":"ameliabr",
+        "password":"Ameliabrown1",
+        "confirmPassword":"Ameliabrown1"
+    },
+    "existingUsername" : {
+        "userRole":"ESS",
+        "employeeName":"Urmila Sagar Bagul",
+        "status":"Enabled",
+        "username":"ameliabr",
+        "password":"Ameliabrown1",
+        "confirmPassword":"Ameliabrown1"
+    },
+    "adminRole":{
+        "userRole":"Admin",
+        "employeeName":"Urmila Sagar Bagul",
+        "status":"Enabled",
+        "username":"urmila",
+        "password":"Urmila1",
+        "confirmPassword":"Urmila1"
+    }
+}

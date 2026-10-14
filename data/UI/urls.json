@@ -1,0 +1,10 @@
+{
+    "orangeLogin":"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+    "orangeDashboard":"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index",
+    "PIM":"https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList",
+    "PIMAdd":"https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee",
+    "adminPage":"https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers",
+    "leavePage":"https://opensource-demo.orangehrmlive.com/web/index.php/leave/viewLeaveList",
+    "apiEmployees": "/web/index.php/api/v2/pim/employees",
+    "apiUsers": "/web/index.php/api/v2/admin/users"
+}

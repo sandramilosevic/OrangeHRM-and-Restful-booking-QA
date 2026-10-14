@@ -1,0 +1,17 @@
+{
+    "admin": {
+        "username":"Admin",
+        "password":"admin123"
+    },
+    "invalid":{
+        "username":"test",
+        "password":"test123"
+    },
+    "loginWithoutPassword":{
+        "username":"Admin",
+        "password":""
+    },
+    "resetUser": {
+        "username":"ameliabr"
+    }
+}

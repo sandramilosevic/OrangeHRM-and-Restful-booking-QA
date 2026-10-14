@@ -1,0 +1,11 @@
+{
+    "validEmployee":{
+        "name":"Amelia",
+        "lastName":"Brown"
+    },
+    "numeric": {
+        "name":"1",
+        "lastName":"1"
+    },
+    "letter":"e"
+}

@@ -1,0 +1,18 @@
+{
+    "validDate": {
+        "employeeName": "Amelia Brown",
+        "type": "CAN - Personal",
+        "from": "2026-10-12",
+        "to": "2026-12-12",
+        "partial": "Start Day Only",
+        "startDay": "Half Day - Morning"
+    },
+    "invalidDate": {
+        "employeeName": "Amelia Brown",
+        "type": "CAN - Personal",
+        "from": "1976-01-01",
+        "to": "2026-10-12",
+        "partial": "Start Day Only",
+        "startDay": "Half Day - Morning"
+    }
+}
