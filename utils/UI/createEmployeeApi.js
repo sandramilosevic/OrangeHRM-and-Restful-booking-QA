@@ -1,6 +1,6 @@
-import { LoginPage } from '../pages/UI/LoginPage';
-import loginData from '../data/UI/loginData.json';
-import urls from '../data/UI/urls.json';
+import { LoginPage } from '../../pages/UI/LoginPage';
+import loginData from '../../data/UI/loginData.json';
+import urls from '../../data/UI/urls.json';
 
 class EmployeeApi {
     constructor(page) {

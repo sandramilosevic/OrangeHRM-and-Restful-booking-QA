@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { EmployeeApi } from '../../utils/createEmployeeApi';
+import { EmployeeApi } from '../../utils/UI/createEmployeeApi';
 import { AdminPage } from '../../pages/UI/AdminPage';
 import { LoginPage } from '../../pages/UI/LoginPage';
 import urls from '../../data/UI/urls.json';

@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { EmployeeApi } from '../../utils/createEmployeeApi';
+import { EmployeeApi } from '../../utils/UI/createEmployeeApi';
 import { LeavePage } from '../../pages/UI/AssignLeavePage';
 import leaveData from '../../data/UI/assignLeaveData.json';
-import { daysFromToday } from '../../utils/dateUtils';
+import { daysFromToday } from '../../utils/UI/dateUtils';
 
 test('TC17 - Assign leave with valid date successfully creates new leave record', async ({ page }) => {
     // Precondition - logged in as admin, employee already exist in the system

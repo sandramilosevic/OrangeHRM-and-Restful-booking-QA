@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
 import employeeData from '../../data/UI/employeeData.json'
 import {PIMPage} from '../../pages/UI/PIMPage';
-import { generateEmployeeId } from '../../utils/generateEmployeeId';
+import { generateEmployeeId } from '../../utils/UI/generateEmployeeId';
 import urls from '../../data/UI/urls.json';
 import {LoginPage} from '../../pages/UI/LoginPage';
 import loginData from '../../data/UI/loginData.json';
