@@ -23,7 +23,7 @@ test("TC 03 - User can't login with invalid credentials", async({page}) => {
     await expect (page).toHaveURL(urls.orangeLogin);
 });
 
-test("TC 04 -User can't login without password", async({page}) => {
+test("TC 04 - User can't login without password", async({page}) => {
     const login = new LoginPage(page);
     await login.loginUser(userData.loginWithoutPassword.username, userData.loginWithoutPassword.password)
     // user is not redirected

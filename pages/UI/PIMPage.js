@@ -21,6 +21,7 @@ export class PIMPage {
     }
 
     async createNewEmployee(name, lastName, id) {
+        // creatinf new employee
         await this.goToPIM();
         await this.addBtn.click();
         await this.firstName.fill(name);
@@ -30,6 +31,7 @@ export class PIMPage {
     }
 
     async searchName(employeeName) {
+        // searching for empoyee
         await this.goToPIM();
         await this.searchEmployeeName.fill(employeeName);
         await this.searchBtn.click();
@@ -51,7 +53,7 @@ async verifyRecordsFound() {
         await this.goToPIM();
         await this.searchEmployeeName.pressSequentially(letter);
 
-        // only real suggestions, not the "Searching...." or "No Records Found" placeholders
+        // only real suggestions, not placeholders
         const options = this.page.locator('.oxd-autocomplete-option')
             .filter({ hasNotText: /Searching|No Records Found/ });
         await expect(options.first()).toBeVisible();

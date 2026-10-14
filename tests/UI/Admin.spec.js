@@ -4,34 +4,45 @@ import { AdminPage } from '../../pages/UI/AdminPage';
 import { LoginPage } from '../../pages/UI/LoginPage';
 import urls from '../../data/UI/urls.json';
 import userData from '../../data/UI/adminAddUser.json';
+import addUser from '../../data/UI/adminAddUser.json';
 
 let api;
 
 test('TC12 - Add user from Admin page', async ({ page }) => {
+    // Precondition - user is logged as admin, employee should be already created throught 'PIM'page
     const api = new EmployeeApi(page);
     try {
+        // creating user with api request
         await api.setup();
         await api.createEmployee('Amelia', 'Brown');
 
         const adminPage = new AdminPage(page);
         await adminPage.goToAdmin();
-        await adminPage.addUser('ESS', 'Amelia Brown', 'Enabled', 'ameliabr', 'Ameliabrown1');
+
+        // adding user from admin page
+        await adminPage.addUser(addUser.validUser.userRole, addUser.validUser.employeeName, addUser.validUser.status, addUser.validUser.username, addUser.validUser.password);
 
         await expect(page).toHaveURL(new RegExp(urls.adminPage));
     } finally {
-      await api.deleteUserByUsername('ameliabr');  
+
+        // delete user for next tests
+      await api.deleteUserByUsername(addUser.validUser.username);  
       await api.cleanup();
     }
 });
 
 test('TC13 - Add user with existing username, but different Employee name', async ({ page }) => {
+    // Preconditon - user is logged in as admin, username is already in the system
     const api = new EmployeeApi(page);
     try {
+
+       // creating user with api request
         await api.setup();
         const emp = await api.createEmployee('Amelia', 'Brown');
         await api.createUser('ameliabr', 'Ameliabrown1', emp);
         await api.createEmployee('Urmila', 'Bagul', 'Sagar');
 
+        // creating user throught admin page with existing username, but new name
         const adminPage = new AdminPage(page);
         await adminPage.goToAdmin();
         await adminPage.addUser('ESS', 'Urmila Sagar Bagul', 'Enabled', 'ameliabr', 'Ameliabrown1');
@@ -43,12 +54,15 @@ test('TC13 - Add user with existing username, but different Employee name', asyn
 });
 
 test('TC14 - Add user with admin role from Admin page', async ({ page }) => {
+    // Precondition - user is logged in as admin, employee should be already created through 'PIM'page
     const api = new EmployeeApi(page);
     try {
         await api.login();
         await api.deleteUserByUsername(userData.adminRole.username);
+        // creating user with api request
         await api.createEmployee('Amelia', 'Brown');
 
+        // creating new user with admin role throught 'Admin' page
         const adminPage = new AdminPage(page);
         await adminPage.goToAdmin();
         await adminPage.addUser(
@@ -68,11 +82,13 @@ test('TC14 - Add user with admin role from Admin page', async ({ page }) => {
 });
 
 test('TC15 - Login as created user', async ({ page, browser }) => {
+    // Precondition - user is created by admin
     const adminContext = await browser.newContext();
     const adminPage = await adminContext.newPage();
     const api = new EmployeeApi(adminPage);
 
     try {
+        // before - creating user with api request
         await api.login();
         const emp = await api.createEmployee('Amelia', 'Brown');
         await api.createUser('ameliabr', 'Ameliabrown1', emp);
@@ -93,6 +109,7 @@ test('TC16 - Login as created admin', async ({ page, browser }) => {
     const api = new EmployeeApi(adminPage);
 
     try {
+        // login as created admin user
         await api.login();
         await api.deleteUserByUsername(userData.adminRole.username);
         const emp = await api.createEmployee('Amelia', 'Brown');

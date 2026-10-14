@@ -21,6 +21,7 @@ class EmployeeApi {
     }
 
     async createEmployee(firstName, lastName, middleName = '') {
+        // creating employee with api request
         const response = await this.page.request.post(urls.apiEmployees, {
             data: { firstName, middleName, lastName, empPicture: null,
                     employeeId: String(Date.now()).slice(-6) },
@@ -31,6 +32,7 @@ class EmployeeApi {
     }
 
     async createUser(username, password, empNumber, userRoleId = 2) {
+        // creating user with api request
     const response = await this.page.request.post(urls.apiUsers, {
         data: { username, password, status: true, userRoleId, empNumber },
     });
