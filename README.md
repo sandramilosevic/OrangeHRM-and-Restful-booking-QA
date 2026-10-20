@@ -30,7 +30,7 @@ The project covers API endpoint testing and UI testing, with both happy path and
 ## Project Structure
 
 ```
-├── Projekat
+├── OrangeHRM-and-Restful-booking-QA
 ├── .github
 ├── data
 │   ├── API
@@ -81,6 +81,12 @@ Open the HTML report:
 ```bash
 npx playwright show-report
 ```
+
+## CI/CD
+
+Tests are automatically run using GitHub Actions on every `push` and `pull request`.
+The workflow installs dependencies and Playwright browsers, runs all tests, and uploads
+the Playwright HTML report as an artifact.
 
 ## Key Findings
 
