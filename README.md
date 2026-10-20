@@ -46,7 +46,6 @@ The project covers API endpoint testing and UI testing, with both happy path and
 │   ├── API
 │   └── UI
 ├── utils
-│   ├── API
 │   └── UI
 ├── .gitignore
 ├── package-lock.json
