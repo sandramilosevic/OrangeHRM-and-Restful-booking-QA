@@ -1,17 +1,14 @@
-import urls from '../../data/UI/urls.json';
+import {Base} from '../../utils/UI/base';
 
 export class LoginPage {
     constructor(page) {
         this.page = page;
-        this.usernameField = page.getByPlaceholder('Username');
-        this.passwordField = page.getByPlaceholder('Password');
-        this.loginBtn = page.getByRole('button', {name: 'Login'});
+        this.base = new Base(page);
     }
-    async loginUser(username, password) {
-        await this.page.goto(urls.orangeLogin);
-        await this.usernameField.fill(username);
-        await this.passwordField.fill(password);
-        await this.loginBtn.click()
+    async loginUser(username, password) {        
+        await this.base.fillByPlaceholder('Username', username);
+        await this.base.fillByPlaceholder('Password', password);
+        await this.base.clickBtn('Login');
     }
 }
 

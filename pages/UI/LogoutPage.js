@@ -6,7 +6,7 @@ export class LogoutPage {
     }
 
     async logout() {
-        await this.userDropdown.click();
-        await this.logoutLink.click();
-    }
+        await this.page.locator('.oxd-userdropdown-tab').click();
+        await this.page.getByRole('menuitem', { name: 'Logout' }).click();
+        }
 }

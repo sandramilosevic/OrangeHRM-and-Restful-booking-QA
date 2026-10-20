@@ -1,15 +1,17 @@
-{
-    "validDate": {
-        "employeeName": "Amelia Brown",
-        "type": "CAN - Personal",
+[
+    {"testcase": "TC17","employeeName": "Amelia Brown","type": "CAN - Personal","fromOffset": 0,"toOffset": 1,
         "partial": "Start Day Only",
-        "startDay": "Half Day - Morning"
+        "startDay": "Half Day - Morning",
+        "valid": true
     },
-    "invalidDate": {
+    {
+        "testcase": "TC18",
         "employeeName": "Amelia Brown",
         "type": "CAN - Personal",
         "from": "1976-01-01",
+        "toOffset": 0,
         "partial": "Start Day Only",
-        "startDay": "Half Day - Morning"
+        "startDay": "Half Day - Morning",
+        "valid": false
     }
-}
+]

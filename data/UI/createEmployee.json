@@ -1,0 +1,16 @@
+[
+  {
+    "testcase": "valid employee",
+    "name": "Amelia",
+    "lastName": "Brown",
+    "employeeId": "90001",
+    "valid": true
+  },
+  {
+    "testcase": "numeric name",
+    "name": "1",
+    "lastName": "1",
+    "employeeId": "90002",
+    "valid": false
+  }
+]

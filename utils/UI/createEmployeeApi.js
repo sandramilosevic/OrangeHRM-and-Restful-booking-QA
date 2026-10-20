@@ -1,6 +1,7 @@
 import { LoginPage } from '../../pages/UI/LoginPage';
 import loginData from '../../data/UI/loginData.json';
 import urls from '../../data/UI/urls.json';
+import adminData from '../../data/UI/adminData.json'
 
 class EmployeeApi {
     constructor(page) {
@@ -10,11 +11,11 @@ class EmployeeApi {
     }
 
     async login() {
+        await this.page.goto(urls.orangeLogin);
         const login = new LoginPage(this.page);
-        await login.loginUser(loginData.admin.username, loginData.admin.password);
+        await login.loginUser(adminData.username, adminData.password);
         await this.page.waitForURL(/dashboard/);
     }
-
     async setup() {
     await this.login();
     return this;

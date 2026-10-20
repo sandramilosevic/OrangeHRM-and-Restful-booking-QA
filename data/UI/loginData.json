@@ -1,17 +1,5 @@
-{
-    "admin": {
-        "username":"Admin",
-        "password":"admin123"
-    },
-    "invalid":{
-        "username":"test",
-        "password":"test123"
-    },
-    "loginWithoutPassword":{
-        "username":"Admin",
-        "password":""
-    },
-    "resetUser": {
-        "username":"ameliabr"
-    }
-}
+[
+    {"testcase":"TC02", "username":"Admin", "password":"admin123", "valid":true},
+    {"testcase":"TC03", "username":"test", "password":"test123", "valid":false},
+    {"testcase":"TC04", "username":"Admin", "password":"", "valid":false}
+]
